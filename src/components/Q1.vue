@@ -16,11 +16,16 @@ import { ref, watch, nextTick } from 'vue';
 
 const count = ref(21);
 const add = () => {
+  count.value++
+  setTimeout(() => {
+    console.log('setTimeout:', count.value)
+  })
   nextTick(() => {
     console.log('nextTick:', count.value)
   })
+  console.log('count:', count.value)
   count.value++
-  count.value++
+  console.log('count:', count.value)
 }
 watch(count, v => {
   console.log('watch:', v)

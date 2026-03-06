@@ -22,12 +22,7 @@ const addRemote = async (a: number, b: number): Promise<number> =>
 
 const inputs = [1, 2, 3, 4, 5, 6];
 async function add(nums: number[]): Promise<number> {
-  let ret = 0;
-  while (nums.length > 1) {
-    ret = await addRemote(nums.shift() || 0, nums.shift() || 0);
-    nums.push(ret);
-  }
-  return nums[0] as number;
+  return 0
 }
 
 const duration = ref(0);
