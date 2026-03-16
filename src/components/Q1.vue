@@ -12,9 +12,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, nextTick } from 'vue';
+import { ref, watch, watchEffect, nextTick } from 'vue';
 
-const count = ref(21);
+const count = ref(22);
 const add = () => {
   count.value++
   setTimeout(() => {
@@ -27,6 +27,9 @@ const add = () => {
   count.value++
   console.log('count:', count.value)
 }
+watchEffect(() => {
+  console.log('watchEffect', count.value)
+})
 watch(count, v => {
   console.log('watch:', v)
 })
