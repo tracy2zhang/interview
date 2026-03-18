@@ -27,11 +27,11 @@ const add = () => {
   count.value++
   console.log('count:', count.value)
 }
-watchEffect(() => {
-  console.log('watchEffect', count.value)
-})
 watch(count, v => {
   console.log('watch:', v)
+})
+watchEffect(() => {
+  console.log('watchEffect', count.value)
 })
 </script>
 
