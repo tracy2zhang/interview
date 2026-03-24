@@ -22,6 +22,9 @@ const add = () => {
   })
   nextTick(() => {
     console.log('nextTick:', count.value)
+    nextTick(() => {
+      console.log('nextTick:', count.value)
+    })
   })
   console.log('count:', count.value)
   count.value++
