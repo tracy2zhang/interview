@@ -16,7 +16,6 @@ import { ref, watch, watchEffect, nextTick } from 'vue';
 
 const count = ref(22);
 const add = () => {
-  count.value++
   setTimeout(() => {
     console.log('setTimeout:', count.value)
   })
@@ -26,6 +25,7 @@ const add = () => {
       console.log('nextTick:', count.value)
     })
   })
+  count.value++
   console.log('count:', count.value)
   count.value++
   console.log('count:', count.value)
