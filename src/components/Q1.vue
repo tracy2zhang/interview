@@ -22,7 +22,7 @@ const add = () => {
   nextTick(() => {
     console.log('nextTick:', count.value)
     nextTick(() => {
-      console.log('nextTick:', count.value)
+      console.log('inner nextTick:', count.value)
     })
   })
   count.value++
