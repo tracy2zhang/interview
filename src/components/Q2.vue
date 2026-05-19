@@ -24,6 +24,7 @@ async function getUsers(ids: number[]): Promise<void> {}
 getUsers(ids);
 // 在数据获取时，设定一个超时时间3秒，比如某一个用户信息获取如果加载超过3秒，则不再等待，直接去获取下一个用户信息。该如何实现
 async function getUsersWithTimeout(ids: number[], delayTime) {}
+getUsersWithTimeout(ids, 3000)
 </script>
 
 <style scoped>
